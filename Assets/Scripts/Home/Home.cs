@@ -5,11 +5,12 @@ using UnityEngine.SceneManagement;
 public class Home : MonoBehaviour
 {
     public GameObject PlayBtn, SettingBtn, ShopBtn;
-    public GameObject SettingPnl, ExitPnl, LevelPnl, ShopPnl;
+    public GameObject SettingPnl, ExitPnl, LevelPnl, ShopPnl, HighScoreBoard;
+    public Text HighScore ;
+
     private bool isPnlOpen = false;
     [Header("UI Pnl's")]
     public GameObject CurPnl;
-    public Transform BGAsset;
 
     [Header("Prefabs")]
     public GameObject Sound;
@@ -34,15 +35,6 @@ public class Home : MonoBehaviour
     void LowerBar()
     {
         iTween.ScaleTo(PlayBtn, iTween.Hash("scale", Vector3.one * 1.1f, "time", 1f, "easetype", "spring", "looptype", "pingpong"));
-        Invoke(nameof(BGAssetAnim), 2f);
-    }
-    int index = 0;
-    void BGAssetAnim()
-    {
-        BGAsset.GetChild(1 - index).gameObject.SetActive(false);
-        BGAsset.GetChild(index).gameObject.SetActive(true);
-        index = 1 - index;
-        Invoke(nameof(BGAssetAnim), UnityEngine.Random.Range(5, 10));
     }
     #endregion
 
@@ -70,6 +62,11 @@ public class Home : MonoBehaviour
                 if (ExitPnl.activeInHierarchy == false)
                 openPanel(ExitPnl);
         }
+    }
+
+    private void Start()
+    {
+        HighScore.text = (GlobalValues.HighScore*100).ToString();
     }
 
     //Setting

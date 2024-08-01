@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: db99b34b4c24a954fbb7119358c78f6c
+guid: 7e843ad0a6d40324db444de9388345cb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -39,7 +39,7 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -69,10 +69,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 512
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -97,12 +97,12 @@ TextureImporter:
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 50
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
@@ -110,190 +110,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sliding Puzzle_0
+      name: pngwing.com_0
       rect:
         serializedVersion: 2
-        x: 311
-        y: 294
-        width: 156
-        height: 148
+        x: 118
+        y: 3319
+        width: 1511
+        height: 2584
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9efc5f35a2c3ba745b6a494c4d1964cd
-      internalID: -1885886630
+      spriteID: 6dcae4b528fec9d40afccaacfffcf97a
+      internalID: 2052626531
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sliding Puzzle_3
+      name: pngwing.com_2
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 3492
+        width: 2023
+        height: 2411
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e6df59881b6b7140b7af66dac9748e7
+      internalID: -430304499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngwing.com_15
       rect:
         serializedVersion: 2
         x: 0
-        y: 149
-        width: 157
-        height: 145
+        y: 205
+        width: 3036
+        height: 2510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed70b9282c386e940a3435022436e09f
-      internalID: -1645285050
+      spriteID: 74292b58c2175cd40bdce25ac88e52ca
+      internalID: 2123393203
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sliding Puzzle_4
+      name: pngwing.com_16
       rect:
         serializedVersion: 2
-        x: 0
+        x: 718
+        y: 2699
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfd4894db2048a04dbabb6d3bbd836dd
+      internalID: -76976592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngwing.com_17
+      rect:
+        serializedVersion: 2
+        x: 3039
         y: 0
-        width: 157
-        height: 149
+        width: 2444
+        height: 3412
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fca4e4f5f2953334babac668ba4eb32c
-      internalID: -1800067200
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sliding Puzzle_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 294
-        width: 157
-        height: 148
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f9b4dff703fcf884a8d5d7cd9d04a9b8
-      internalID: -220627280
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sliding Puzzle_5
-      rect:
-        serializedVersion: 2
-        x: 156
-        y: 294
-        width: 155
-        height: 148
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 09b6afac40ccf6747b78c1a11a1f5540
-      internalID: -1828673930
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sliding Puzzle_2
-      rect:
-        serializedVersion: 2
-        x: 156
-        y: 149
-        width: 155
-        height: 145
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a9bafcdf666a82749bd99fe2573b661b
-      internalID: -606654196
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sliding Puzzle_6
-      rect:
-        serializedVersion: 2
-        x: 156
-        y: 0
-        width: 155
-        height: 149
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2db45ff12fe8efb4c86143f66e443291
-      internalID: 589468290
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sliding Puzzle_7
-      rect:
-        serializedVersion: 2
-        x: 311
-        y: 148
-        width: 156
-        height: 146
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b9fe4a7695199114ab3209da0beb1be1
-      internalID: 1547158740
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sliding Puzzle_8
-      rect:
-        serializedVersion: 2
-        x: 311
-        y: 0
-        width: 156
-        height: 148
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 148f290bc5861594399a1b780647b751
-      internalID: -805759594
+      spriteID: 2ac7bcb3e3c8a6c44bd9ec8b6bbe170c
+      internalID: 1734051126
       vertices: []
       indices: 
       edges: []
@@ -309,15 +225,24 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sliding Puzzle_0: -1885886630
-      Sliding Puzzle_1: -220627280
-      Sliding Puzzle_2: -606654196
-      Sliding Puzzle_3: -1645285050
-      Sliding Puzzle_4: -1800067200
-      Sliding Puzzle_5: -1828673930
-      Sliding Puzzle_6: 589468290
-      Sliding Puzzle_7: 1547158740
-      Sliding Puzzle_8: -805759594
+      pngwing.com_0: 2052626531
+      pngwing.com_1: -2106532864
+      pngwing.com_10: -1257701703
+      pngwing.com_11: -1242397078
+      pngwing.com_12: -581219626
+      pngwing.com_13: 912001507
+      pngwing.com_14: 142242117
+      pngwing.com_15: 2123393203
+      pngwing.com_16: -76976592
+      pngwing.com_17: 1734051126
+      pngwing.com_2: -430304499
+      pngwing.com_3: -1075893471
+      pngwing.com_4: -1240778815
+      pngwing.com_5: -606441430
+      pngwing.com_6: -612447862
+      pngwing.com_7: -1172798137
+      pngwing.com_8: -662007761
+      pngwing.com_9: 444780755
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

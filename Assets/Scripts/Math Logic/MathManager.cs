@@ -4,7 +4,8 @@ public class MathManager : MonoBehaviour
 {
 
     private int num1, num2;
-    public static int ans, upperLimit;
+    public static float ans;
+    public static int upperLimit, lowerLimit;
     [SerializeField] Text question;
     [SerializeField] Text option1;
     [SerializeField] Text option2;
@@ -16,7 +17,8 @@ public class MathManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        upperLimit = 50;
+        lowerLimit = 1;
+        upperLimit = 51;
         NumGeneration();
     }
 
@@ -36,11 +38,11 @@ public class MathManager : MonoBehaviour
     public void NumGeneration()
     {
         GlobalValues.Level ++ ;
-        num1 = Random.Range(1, upperLimit);
-        num2 = Random.Range(1, upperLimit);
+        num1 = Random.Range(lowerLimit, upperLimit);
+        num2 = Random.Range(lowerLimit, upperLimit);
         count = Random.Range(1, 4);
-        wrong1 = Random.Range(1, upperLimit);
-        wrong2 = Random.Range(1, upperLimit); 
+        wrong1 = Random.Range(lowerLimit, upperLimit);
+        wrong2 = Random.Range(lowerLimit, upperLimit);
         if (wrong1 == wrong2 || wrong1 == num1 || wrong1 == num2 ||
             wrong2 == num1 || wrong2 == num2 ||
             num1 == num2)
@@ -77,45 +79,27 @@ public class MathManager : MonoBehaviour
             option1.text = wrong2.ToString();
         }
     }
-    int CorrectAns()
+    float CorrectAns()
     {
         switch (GlobalValues.Operation)
         {
             case '+':
-                ans= num1 + num2;
+                ans = num1 + num2;
                 return ans;
             case '-':
-                ans= num1 - num2;
+                ans = num1 - num2;
                 return ans;
             case '*':
-                ans= num1 * num2;
+                ans = num1 * num2;
                 return ans;
             case '/':
-                ans= num1 / num2;
+                ans = num1 / num2;
                 return ans;
             default:
                 ans= num1 + num2;
                 return ans;
         }
+
     }
 
-    public void AnswerChecker()
-    {
-        Text textComponent = GetComponentInChildren<Text>();
-
-        if (textComponent != null && textComponent.text == ans.ToString())
-        {
-            Debug.Log("Correct Answer");
-            NumGeneration();
-        }
-        else
-        {
-            Debug.Log("Wrong Answer");
-        }
-
-        if (GlobalValues.Level % 5 == 0 && upperLimit <= 1001)
-        {
-            upperLimit += 51;
-        }
-    }
 }

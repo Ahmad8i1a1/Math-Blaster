@@ -7,20 +7,20 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public GameObject PauseBtn, ResumeBtn, HomeBtn, HintBtn;
-    public GameObject PausePnl, WinPnl, CurPnl, ExitPnl;
-    [SerializeField] Text Level;
+    public GameObject PausePnl, WinPnl, CurPnl, ExitPnl, HighScoreCat, WinShine;
+
+    [SerializeField] Text Level , Score ;
 
     private bool isPnlOpen = false;
-
     //Timer
     [SerializeField] Text countDownText;
-    float remainingTime;
+    public static float remainingTime;
     [SerializeField] Slider countDownSlider;
 
     // Start is called before the first frame update
     void Start()
     {
-        remainingTime = 120;
+        remainingTime = 30;
         countDownSlider.maxValue = 0;
         countDownSlider.minValue = -remainingTime;
 
@@ -32,22 +32,53 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        upgradeLevel();
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (CurPnl.activeSelf == true)
+                closepanel(CurPnl);
+            else
+                if (ExitPnl.activeInHierarchy == false)
+                openPanel(ExitPnl);
+        }
 
         Level.text = "Level : " + GlobalValues.Level;
-        if (GlobalValues.Level % 10 == 0 && remainingTime != 15)
+
+        if (!isPnlOpen)
         {
-            remainingTime -= 5;
+            Timer();
         }
-        Timer();
+
+
+        if(remainingTime == 0)
+        {
+            WinShow();
+        }
+
     }
 
     //WinPnl
     #region WinPnl
+    public void WinShow()
+    {
+        WinPnl.SetActive(true);
+        WinShine.transform.Rotate(0, 0, 30); 
+        iTween.ScaleTo(WinShine, iTween.Hash("scale", Vector3.one, "time", 1f, "easetype", iTween.EaseType.easeOutElastic));
+        //SoundsManager.controller.completionSound();
+        Score.text= (GlobalValues.Level*100).ToString();
+        if (GlobalValues.Level > GlobalValues.HighScore)
+        {
+            HighScoreCat.SetActive(false);
+            GlobalValues.HighScore = GlobalValues.Level;
+        }
 
+    }
     public void TryAgain()
     {
         SoundsManager.controller.click();
-        closepanel(PausePnl);
+        SceneManager.LoadScene("GamePlay");
+        GlobalValues.Level = 0;
     }
     public void Wintohome()
     {
@@ -75,7 +106,7 @@ public class GameManager : MonoBehaviour
     #region Pause
     public void pause()
     {
-        SoundsManager.controller.click();
+        SoundsManager.controller.panelSound();
         openPanel(PausePnl);
     }
 
@@ -91,13 +122,31 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
+    //Upgrade
+    #region Upgrade
+    public void upgradeLevel()
+    {
+
+        if (GlobalValues.Level % 5 == 0 && MathManager.upperLimit <= 1001 && MathManager.answerState==true)
+        {
+            MathManager.upperLimit += 50;
+            MathManager.lowerLimit += 50;
+        }
+
+        if (GlobalValues.Level % 10 == 0 && remainingTime <= 15 && MathManager.answerState == true)
+        {
+            remainingTime -= 5;
+        }
+    }
+    #endregion
+
     //Timer
     #region Timer
     private void Timer()
     {
 
         countDownSlider.value = remainingTime;
-        //https://www.youtube.com/watch?v=POq1i8FyRyQ
+        // https://www.youtube.com/watch?v=POq1i8FyRyQ
         remainingTime -= Time.deltaTime;
         if (remainingTime < 0)
         {
