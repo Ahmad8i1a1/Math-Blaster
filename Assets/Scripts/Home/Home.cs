@@ -66,7 +66,7 @@ public class Home : MonoBehaviour
 
     private void Start()
     {
-        HighScore.text = (GlobalValues.HighScore*100).ToString();
+        HighScore.text = (GlobalValues.isHighScore).ToString();
     }
 
     //Setting

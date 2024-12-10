@@ -66,11 +66,11 @@ public class GameManager : MonoBehaviour
         WinShine.transform.Rotate(0, 0, 30); 
         iTween.ScaleTo(WinShine, iTween.Hash("scale", Vector3.one, "time", 1f, "easetype", iTween.EaseType.easeOutElastic));
         //SoundsManager.controller.completionSound();
-        Score.text= (GlobalValues.Level*100).ToString();
-        if (GlobalValues.Level > GlobalValues.HighScore)
+        Score.text= (GlobalValues.Level).ToString();
+        if (GlobalValues.Level > GlobalValues.isHighScore)
         {
             HighScoreCat.SetActive(false);
-            GlobalValues.HighScore = GlobalValues.Level;
+            GlobalValues.isHighScore = GlobalValues.Level;
         }
 
     }
