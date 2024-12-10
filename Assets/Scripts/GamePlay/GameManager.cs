@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Gley.MobileAds;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        API.ShowInterstitial();
         remainingTime = 30;
         countDownSlider.maxValue = 0;
         countDownSlider.minValue = -remainingTime;

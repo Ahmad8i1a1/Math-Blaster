@@ -504,6 +504,7 @@ MonoBehaviour:
   HighScore: {fileID: 1914545439}
   CurPnl: {fileID: 1002728033}
   Sound: {fileID: 190140, guid: 749bf7093d144b8449ad73173410ab7d, type: 3}
+  Ads: {fileID: 2882716153076283222, guid: 4d4b798369383499ab18f0ab56343e14, type: 3}
   SettingIcons:
   - {fileID: 1126373325}
   - {fileID: 1122499583}

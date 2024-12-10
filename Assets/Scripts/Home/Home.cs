@@ -14,6 +14,7 @@ public class Home : MonoBehaviour
 
     [Header("Prefabs")]
     public GameObject Sound;
+    public GameObject Ads;
      
     [Header("Setting")]
     public Image[] SettingIcons;
@@ -24,6 +25,7 @@ public class Home : MonoBehaviour
         if (!GlobalValues.isPrefabsActice)
         {
             DontDestroyOnLoad(Instantiate(Sound));
+            DontDestroyOnLoad(Instantiate(Ads));
             GlobalValues.isPrefabsActice = true;
         }
         iTween.ScaleTo(PlayBtn, iTween.Hash("scale", Vector3.one, "time", 0.5f, "easetype", "spring", "delay", 0.2f, "oncomplete", nameof(LowerBar), "oncompletetarget", gameObject));
