@@ -159,10 +159,11 @@ public class Home : MonoBehaviour
     #region Store
     public void OpenShopPanal()
     {
-        if (isPnlOpen) return;
-        SoundsManager.controller.click();
-        ShopPnl.SetActive(true);
-        Debug.Log("working on it but open");
+        SceneManager.LoadScene("Game");//testing perpose
+        //if (isPnlOpen) return;
+        //SoundsManager.controller.click();
+        //ShopPnl.SetActive(true);
+        //Debug.Log("working on it but open");
     }
     public void CloseShopPanel()
     {
